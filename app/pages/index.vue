@@ -21,7 +21,7 @@ const versions = ref<(ChangelogVersionProps & { content?: string })[]>([
   {
     title: 'Work!',
     description: 'Added this and the one below! And database stuff.',
-    image: 'https://media.discordapp.net/attachments/1498798355302584434/1504203067967541398/dino-cat.gif?ex=6a2868c6&is=6a271746&hm=c821dfca03c0ed868bdce351357341eb56925e898054347cd088d5ba3f6f9081&=',
+    image: '/dino-cat.gif',
     date: '2026-06-08',
     ui: {
       image: 'object-contain'
