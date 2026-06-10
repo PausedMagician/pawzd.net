@@ -1,0 +1,8 @@
+services:
+  pawzd.net:
+    image: ghcr.io/pausedmagician/pawzd.net:latest
+    pull_policy: always
+    environment:
+      - HOST_URL=https://pawzd.net/
+    ports:
+      - 3080:3000

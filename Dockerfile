@@ -15,6 +15,7 @@ RUN bun --bun run build
 
 # copy production dependencies and source code into final image
 FROM oven/bun:1 AS production
+LABEL org.opencontainers.image.source="https://github.com/PausedMagician/pawzd.net"
 WORKDIR /app
 
 # Only `.output` folder is needed from the build stage
