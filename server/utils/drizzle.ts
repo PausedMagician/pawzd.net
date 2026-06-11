@@ -5,13 +5,12 @@ import { Pool } from 'pg'
 
 export { sql, eq, and, or } from 'drizzle-orm'
 
-const config = useRuntimeConfig()
 export const tables = schema
 
 const pool = new Pool({
   connectionString: import.meta.dev
     ? 'postgresql://postgres:postgres@localhost/pawzd.net'
-    : config.databaseUrl
+    : process.env.DATABASE_URL
 })
 
 const driz = drizzle(pool, { schema })
