@@ -5,6 +5,10 @@
   * {
     @apply transition-colors duration-300;
   }
+
+  #__nuxt {
+    position: relative
+  }
 }
 
 @theme static {

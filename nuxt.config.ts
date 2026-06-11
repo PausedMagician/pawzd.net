@@ -40,7 +40,13 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-01-15',
   nitro: {
-    preset: 'bun'
+    preset: 'bun',
+    experimental: {
+      tasks: true
+    },
+    scheduledTasks: {
+      '*/15 * * * *': 'db:cleanup'
+    }
   },
 
   eslint: {

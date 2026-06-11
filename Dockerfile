@@ -20,6 +20,7 @@ WORKDIR /app
 
 # Only `.output` folder is needed from the build stage
 COPY --from=build /app/.output /app
+COPY ./server/database/migrations ./server/database/migrations
 
 # run the app
 EXPOSE 3000/tcp

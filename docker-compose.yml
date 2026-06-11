@@ -4,5 +4,6 @@ services:
     pull_policy: always
     environment:
       - HOST_URL=https://pawzd.net/
+      - DATABASE_URL=${DATABASE_URL}
     ports:
       - 3080:3000

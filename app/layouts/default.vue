@@ -46,5 +46,8 @@
         />
       </template>
     </UFooter>
+    <ClientOnly>
+      <UCursors />
+    </ClientOnly>
   </UApp>
 </template>

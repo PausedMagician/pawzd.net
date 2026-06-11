@@ -3,6 +3,16 @@ import type { ChangelogVersionProps } from '@nuxt/ui'
 
 const versions = ref<(ChangelogVersionProps & { content?: string })[]>([
   {
+    title: 'Cursors!!!',
+    description: 'Cursors now dart around the page.',
+    image: '/Cursors.png',
+    date: '2026-06-10',
+    ui: {
+      imageWrapper: 'border border-default',
+      image: 'object-contain'
+    }
+  },
+  {
     title: 'About me!',
     description: 'Created a page where things about me are listed!',
     to: '/about',
