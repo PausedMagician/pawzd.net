@@ -11,11 +11,15 @@ async function listCursors(driz: NodePgDatabase<typeof import('~~/server/databas
 }
 
 export default defineEventHandler(async (event) => {
+  // let start = performance.now()
   const { page } = await getValidatedRouterParams(event, z.object({
     page: z.string()
   }).parse)
+  // console.log('Validation:', performance.now() - start)
 
+  // start = performance.now()
   const driz = useDrizzle()
+  // console.log('Driz get:', performance.now() - start)
 
   if (getHeader(event, 'accept') === 'text/event-stream') {
     setHeader(event, 'content-type', 'text/event-stream')
@@ -54,5 +58,8 @@ export default defineEventHandler(async (event) => {
 
     return sendStream(event, body)
   }
-  return await listCursors(driz, page)
+  // start = performance.now()
+  const data = await listCursors(driz, page)
+  // console.log('Data get:', performance.now() - start)
+  return data
 })

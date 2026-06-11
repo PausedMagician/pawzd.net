@@ -1,0 +1,23 @@
+# Title: {Type}: Module. Ex. Fixes: Database
+
+
+# Why am I making this commit
+# Ex. Performance was wrong when it came to db.
+Reason:
+
+
+# If a fix, what caused the issue?
+# Ex. useDrizzle wasn't kept, made new pool each call. Crashed database too (too many clients)
+# Cause:
+
+
+# How was this fixed?
+# Ex. Creating a constant pool and returning single instance of drizzle instead of creating new instance.
+# Fix:
+
+
+# Anything extra fixed or done?
+# Ex. - Git commit template
+# Ex. - Commented out performance logs (for easy checking if needed, better solution should be considered)
+# Ex. - Copy migrations into dev, so as to keep it up to date
+# Additions:
