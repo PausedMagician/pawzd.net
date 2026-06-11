@@ -42,6 +42,8 @@ export default defineEventHandler(async (event) => {
             await sleep(1000)
           } catch (e) {
             console.error(`Error checking cursors for '${page}'`, e)
+            controller.close()
+            break
           }
         }
       },
